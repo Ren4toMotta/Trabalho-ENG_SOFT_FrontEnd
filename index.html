@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SpaceGames</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="espaco-sideral.png" type="image/png">
+  
+</head>
+<body>
+  <!-- Cabeçalho principal com nome do site, botão de tema e menu de navegação -->
+  <header class="main-header">
+    <h1 class="site-title">SpaceGames</h1> 
+    <button id="theme-toggle" class="theme-button" aria-label="Alternar tema">🌙 Alternar tema</button>
+    <nav class="main-nav">
+      <ul class="nav-list">
+        <li class="nav-item"><a href="#catalog" class="nav-link">Catálogo de Jogos</a></li>
+        <li class="nav-item"><a href="#cart" class="nav-link">Catálogo Completo</a></li>
+        <li class="nav-item"><a href="#login" class="nav-link">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main-content">
+    <!-- seção de promoçoes principais -->
+    <section id="catalog" class="section-promo"> 
+      <div class="promo-header">
+        <div class="promo-text">
+          <h2 class="promo-title">Descontos incríveis para você!</h2>
+          <p class="promo-subtitle">Com certeza tem algo pro seu gosto aqui com os melhores preços!</p>
+        </div>
+         <!-- Botão com link para um vídeo (Pegadinha) -->
+        <a target="_blank" class="button button-see-more" href="https://youtu.be/xvFZjo5PgG0?si=MkD8aK4Vf9r5DsVg">Não clique</a>
+      </div>
+    <!-- Galeria de imagens promocionais -->
+      <div class="promo-gallery">
+
+        <a id="Marvel" target="_blank" href="https://www.youtube.com/watch?v=-b0veB7q9P4">
+          <img class="promo-image promo-image-large" src="https://cdn2.unrealengine.com/01-1920x1080-1920x1080-88255a697e4f.jpg" alt="Promoção destaque">
+        </a>
+
+        <div class="promo-image-small-container">
+
+          <a class="dark" target="_blank" href="https://www.youtube.com/watch?v=Woe0PYZPxRw">
+            <img class="promo-image" src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/570940/capsule_616x353.jpg?t=1726158603" alt="Promoção secundária 1">
+          </a>
+
+          <a class="terraria" target="_blank" href="https://www.youtube.com/watch?v=w7uOhFTrrq0">
+            <img class="promo-image" src="https://assets.nintendo.com/image/upload/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000001702/dac3a26570b5ca1ddf703bf0add7cc7c527f71a2b56521baf69e20c7a573c610" alt="Promoção secundária 2">
+          </a>
+          
+        </div>
+
+      </div>
+
+    </section> <!-- Fim promoções-->
+
+    <!-- seção de descrição do site-->
+    <section class="description-container">
+      <div class="description-text">
+        <div>
+          <img class="imagens" src="check.svg" alt="check-icon">
+        </div>
+        <div class="description-content">
+          <span class="description-subtext">Loja</span> 
+          <span class="description-bigText">100% Oficial</span>
+        </div>
+      </div>
+      <div class="description-text">
+        <div>
+          <img class="imagens" src="shield.svg" alt="shield-icon">
+        </div>
+        <div class="description-content">
+          <span class="description-subtext">Experiência</span>
+          <span class="description-bigText">Segura e simples</span>
+        </div>
+      </div>
+      <div class="description-text">
+        <div>
+          <img class="imagens" src="play.svg" alt="play-icon">
+        </div>
+        <div class="description-content">
+          <span class="description-subtext">Divirta-se com</span>
+          <span class="description-bigText">Os melhores jogos</span>
+        </div>
+      </div>
+    </section> <!-- Fim seção de descrição -->
+
+    <!-- Catálogo completo com botão de alternância de visualização -->
+    <section id="cart" class="section-catalog">
+      <h2 class="section-title">Catálogo Completo</h2>
+      <button id="toggle-catalog" class="button button-toggle" aria-label="Mostrar/Ocultar catálogo">
+        <span class="visually-hidden">Alternar visualização do catálogo</span>
+        <span aria-hidden="true">▼</span>
+      </button>
+      
+      <div id="full-catalog" class="game-grid">
+        <!-- Game Cards -->
+        <article class="game-card">
+          <h3 class="game-title">FIFA 23</h3>
+          <a href="https://www.youtube.com/watch?v=o3V-GvvzjE4" target="_blank" class="game-link">
+            <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1811260/header.jpg" alt="FIFA 23" class="game-image">
+          </a>
+          <p class="game-price">R$249,00</p>
+        </article>
+    
+        <article class="game-card">
+          <h3 class="game-title">Starfield</h3>
+          <a href="https://www.youtube.com/watch?v=pYqyVpCV-3c" target="_blank" class="game-link">
+            <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1716740/header.jpg" alt="Starfield" class="game-image">
+          </a>
+          <p class="game-price">R$349,90</p>
+        </article>
+    
+        <article class="game-card">
+          <h3 class="game-title">Forza Horizon 5</h3>
+          <a href="https://www.youtube.com/watch?v=FYH9n37B7Yw" target="_blank" class="game-link">
+            <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1551360/header.jpg" alt="Forza Horizon 5" class="game-image">
+          </a>
+          <p class="game-price">R$299,90</p>
+        </article>
+    
+        <article class="game-card">
+          <h3 class="game-title">Assassin's Creed Mirage</h3>
+          <a href="https://www.youtube.com/watch?v=9hjico7nYvo" target="_blank" class="game-link">
+            <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/2486780/header.jpg" alt="AC Mirage" class="game-image">
+          </a>
+          <p class="game-price">R$279,00</p>
+        </article>
+    
+        <article class="game-card">
+          <h3 class="game-title">Alan Wake 2</h3>
+          <a href="https://www.youtube.com/watch?v=yUu5Gz_h4XE" target="_blank" class="game-link">
+            <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1084220/header.jpg" alt="Alan Wake 2" class="game-image">
+          </a>
+          <p class="game-price">R$229,90</p>
+        </article>
+    
+        <article class="game-card">
+          <h3 class="game-title">Lies of P</h3>
+          <a href="https://www.youtube.com/watch?v=tdMFPOjnR7A" target="_blank" class="game-link">
+            <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1627720/header.jpg" alt="Lies of P" class="game-image">
+          </a>
+          <p class="game-price">R$249,90</p>
+        </article>
+    
+        <article class="game-card">
+          <h3 class="game-title">Dead Space Remake</h3>
+          <a href="https://www.youtube.com/watch?v=cTDJNZ9cK1w" target="_blank" class="game-link">
+            <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1693980/header.jpg" alt="Dead Space Remake" class="game-image">
+          </a>
+          <p class="game-price">R$279,00</p>
+        </article>
+    
+        <article class="game-card">
+          <h3 class="game-title">Like a Dragon: Ishin!</h3>
+          <a href="https://www.youtube.com/watch?v=wBVcMmvL4IQ" target="_blank" class="game-link">
+            <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1805480/header.jpg" alt="Like a Dragon Ishin" class="game-image">
+          </a>
+          <p class="game-price">R$249,90</p>
+        </article>
+    
+        <article class="game-card">
+          <h3 class="game-title">Diablo IV</h3>
+          <a href="https://www.youtube.com/watch?v=0SSYzl9fXOQ" target="_blank" class="game-link">
+            <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/2344520/header.jpg" alt="Diablo IV" class="game-image">
+          </a>
+          <p class="game-price">R$349,90</p>
+        </article>
+    
+        <article class="game-card">
+          <h3 class="game-title">Atomic Heart</h3>
+          <a href="https://www.youtube.com/watch?v=OeVapCrI1pY" target="_blank" class="game-link">
+            <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/668580/header.jpg" alt="Atomic Heart" class="game-image">
+          </a>
+          <p class="game-price">R$299,00</p>
+        </article>
+    
+        <article class="game-card">
+          <h3 class="game-title">Wo Long: Fallen Dynasty</h3>
+          <a href="https://www.youtube.com/watch?v=-7J7H9Uk5js" target="_blank" class="game-link">
+            <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1448440/header.jpg" alt="Wo Long" class="game-image">
+          </a>
+          <p class="game-price">R$259,90</p>
+        </article>
+    
+        <article class="game-card">
+          <h3 class="game-title">Street Fighter 6</h3>
+          <a href="https://www.youtube.com/watch?v=1INU3FOJsTw" target="_blank" class="game-link">
+            <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1364780/header.jpg" alt="Street Fighter 6" class="game-image">
+          </a>
+          <p class="game-price">R$279,90</p>
+        </article>
+    
+        <article class="game-card">
+          <h3 class="game-title">Remnant II</h3>
+          <a href="https://www.youtube.com/watch?v=9Xzi6fSgAjI" target="_blank" class="game-link">
+            <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1282100/header.jpg" alt="Remnant II" class="game-image">
+          </a>
+          <p class="game-price">R$229,00</p>
+        </article>
+    
+        <article class="game-card">
+          <h3 class="game-title">Baldur's Gate 3</h3>
+          <a href="https://www.youtube.com/watch?v=1X7C2z8lH2E" target="_blank" class="game-link">
+            <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1086940/header.jpg" alt="Baldur's Gate 3" class="game-image">
+          </a>
+          <p class="game-price">R$299,90</p>
+        </article>
+    
+        <article class="game-card">
+          <h3 class="game-title">Marvel's Spider-Man: Miles Morales</h3>
+          <a href="https://www.youtube.com/watch?v=GqPLeQJ6lJk" target="_blank" class="game-link">
+            <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1817190/header.jpg" alt="Spider-Man Miles Morales" class="game-image">
+          </a>
+          <p class="game-price">R$199,90</p>
+        </article>
+    
+        <article class="game-card">
+          <h3 class="game-title">The Callisto Protocol</h3>
+          <a href="https://www.youtube.com/watch?v=BqGkmg1cs9Y" target="_blank" class="game-link">
+            <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1544020/header.jpg" alt="The Callisto Protocol" class="game-image">
+          </a>
+          <p class="game-price">R$229,90</p>
+        </article>
+    
+        <article class="game-card">
+          <h3 class="game-title">Sons of the Forest</h3>
+          <a href="https://www.youtube.com/watch?v=fbGgFnX6tRg" target="_blank" class="game-link">
+            <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1326470/header.jpg" alt="Sons of the Forest" class="game-image">
+          </a>
+          <p class="game-price">R$79,90</p>
+        </article>
+    
+        <article class="game-card">
+          <h3 class="game-title">High On Life</h3>
+          <a href="https://www.youtube.com/watch?v=DbPK3xjtuVo" target="_blank" class="game-link">
+            <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1583230/header.jpg" alt="High On Life" class="game-image">
+          </a>
+          <p class="game-price">R$159,00</p>
+        </article>
+    
+        <article class="game-card">
+          <h3 class="game-title">Palworld</h3>
+          <a href="https://www.youtube.com/watch?v=D9w97KSEAOo" target="_blank" class="game-link">
+            <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1623730/header.jpg" alt="Palworld" class="game-image">
+          </a>
+          <p class="game-price">R$89,99</p>
+        </article>
+    
+        <article class="game-card">
+          <h3 class="game-title">Helldivers 2</h3>
+          <a href="https://www.youtube.com/watch?v=UC5EpJR0GBQ" target="_blank" class="game-link">
+            <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/553850/header.jpg" alt="Helldivers 2" class="game-image">
+          </a>
+          <p class="game-price">R$199,00</p>
+        </article>
+      </div>
+    </section>  
+      <!-- Fim Game Cards -->
+
+       <!-- Seção de Login -->
+    <section id="login" class="section-login"> 
+      <h2 class="section-title">Faça o Login</h2>
+      <form id="login-form" class="login-form">
+        <div class="form-group">
+          <label for="username" class="form-label">Usuário:</label>
+          <input type="text" id="username" name="username" class="form-input" required placeholder="Seu nome">
+        </div>
+
+        <div class="form-group">
+          <label for="password" class="form-label">Senha:</label>
+          <input type="password" id="password" name="password" class="form-input" required placeholder="Sua senha">
+        </div>
+
+        <button type="submit" class="button button-login">Entrar</button>
+      </form>
+    </section> <!-- Fim Seção de Login -->
+  </main>
+
+    <!-- Rodapé do site --> 
+  <footer class="main-footer">
+    <p class="copyright">&copy; 2025 - SpaceGames</p>
+  </footer>
+
+    <!-- Script JavaScript externo -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,475 @@
+/* Importa a fonte Roboto do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Reset de estilos básicos para todos os elementos */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Variáveis de tema ("modo escuro") */
+:root {
+  --bg-color: #000;
+  --text-color: #fff;
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --accent-color: #0a84ff;
+  --overlay-color: rgba(0, 0, 0, 0.7);
+  --card-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  --border-radius: 10px;
+}
+
+/* Substituições para modo claro */
+body.light-mode {
+  --bg-color: #fff;
+  --text-color: #000;
+  --card-bg: rgba(0, 0, 0, 0.05);
+  --overlay-color: rgba(255, 255, 255, 0.7);
+}
+
+/* Estilização do body com background e transição */
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to top, transparent, black),
+              url('https://wallpapercave.com/wp/wp2562160.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: var(--text-color);
+  transition: all 0.3s ease-in-out;
+  line-height: 1.6;
+}
+
+/* Conteúdo principal centralizado e com padding */
+.main-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Cabeçalho principal com alinhamento central */
+.main-header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
+/* Título do site */
+.site-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+/* Botão de alternância de tema */
+.theme-button {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: transparent;
+  color: var(--text-color);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+/* Efeito hover no botão de tema */
+.theme-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: scale(1.05);
+}
+
+/* Navegação em lista com espaçamento */
+.nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+/* Estilo dos links da nav */
+.nav-link {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s, transform 0.2s;
+  padding: 0.5rem 0;
+  position: relative;
+}
+
+/* Hover nos links */
+.nav-link:hover {
+  color: var(--accent-color);
+}
+
+/* Underline animado ao passar o mouse */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--accent-color);
+  transition: width 0.3s;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Título das seções */
+.section-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+/* Seção promocional com espaçamento */
+.section-promo {
+  margin-bottom: 4rem;
+}
+
+/* Cabeçalho da seção promo com espaço entre elementos */
+.promo-header {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Título e subtítulo da promoção */
+.promo-title {
+  font-size: 2rem;
+  text-align: left;
+  margin-bottom: 0.5rem;
+}
+
+.promo-subtitle {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+/* Botão "ver mais" */
+.button-see-more {
+  font-size: 1.2rem;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid white;
+  background-color: transparent;
+  color: var(--text-color);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  text-decoration: none;
+}
+
+.button-see-more:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-3px);
+}
+
+/* Galeria promocional em layout flexível */
+.promo-gallery {
+  display: flex;
+  gap: 30px;
+}
+
+/* Imagens com efeito de zoom no hover */
+.promo-image {
+  border-radius: 20px;
+  transition: transform 0.3s;
+}
+
+.promo-image:hover {
+  transform: scale(1.02);
+}
+
+/* Imagem grande da galeria */
+.promo-image-large {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+}
+
+/* Container de imagens pequenas */
+.promo-image-small-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 30%;
+}
+
+/* Imagens pequenas com altura proporcional */
+.promo-image-small-container .promo-image {
+  width: 100%;
+  height: calc(100% - 20px);
+  object-fit: cover;
+}
+
+/* Container para descrições */
+.description-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1280px;
+  width: 100%;
+  border: 1px solid white;
+  justify-content: space-around;
+  padding: 30px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+/* Blocos de texto descritivos */
+.description-text {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  line-height: 30px;
+}
+
+/* Layout da descrição */
+.description-text div {
+  display: flex;
+}
+
+.description-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.description-subtext {
+  font-size: 1.3rem;
+  display: block;
+}
+
+.description-bigText {
+  font-size: 2rem;
+  display: block;
+}
+
+/* Botão em formato circular */
+.button-toggle {
+  display: block;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--text-color);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.button-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+/* Classe utilitária para esconder elementos da visualização */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* Grade de cards de jogos */
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+/* Card de jogo com efeito hover */
+.game-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--card-bg);
+  backdrop-filter: blur(8px);
+  padding: 1.5rem;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: var(--card-shadow);
+  transition: transform 0.3s ease;
+  height: 100%;
+}
+
+.game-card:hover {
+  transform: translateY(-10px);
+}
+
+.game-title {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+/* Imagem do jogo */
+.game-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  transition: opacity 0.3s;
+}
+
+.game-link:hover .game-image {
+  opacity: 0.8;
+}
+
+/* Preço do jogo */
+.game-price {
+  font-size: 1.1rem;
+  color: var(--text-color);
+  font-weight: 700;
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+/* Formulário de login */
+.login-form {
+  background-color: var(--card-bg);
+  backdrop-filter: blur(8px);
+  color: var(--text-color);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Grupo de inputs do formulário */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Label e input */
+.form-label {
+  font-weight: 600;
+}
+
+.form-input {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: var(--text-color);
+  padding: 0.75rem;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.form-input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Botões padrão */
+.button {
+  background-color: var(--accent-color);
+  color: #fff;
+  border: none;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.button:hover {
+  background-color: #0070db;
+  transform: translateY(-3px);
+}
+
+/* Botão específico de login */
+.button-login {
+  margin-top: 1rem;
+}
+
+/* Rodapé */
+.main-footer {
+  text-align: center;
+  padding: 2rem;
+  color: #aaa;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Animação de texto com cores RGB */
+@keyframes rgb {
+  0% { color: red; }
+  25% { color: orange; }
+  50% { color: lime; }
+  75% { color: cyan; }
+  100% { color: magenta; }
+}
+
+/* Aplica a animação RGB em todos os filhos */
+.rgb-text * {
+  animation: rgb 1s infinite linear;
+}
+
+/* Responsivo para telas médias */
+@media (max-width: 1024px) {
+  .promo-gallery {
+    flex-direction: column;
+  }
+
+  .promo-image-large {
+    width: 100%;
+  }
+
+  .promo-image-small-container {
+    width: 100%;
+    flex-direction: row;
+  }
+
+  .promo-image-small-container .promo-image {
+    width: 50%;
+    height: auto;
+  }
+}
+
+/* Responsivo para telas pequenas */
+@media (max-width: 768px) {
+  .nav-list {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .promo-header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .promo-text {
+    text-align: center;
+  }
+
+  .promo-image-small-container {
+    flex-direction: column;
+  }
+
+  .promo-image-small-container .promo-image {
+    width: 100%;
+  }
+
+  .game-grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+}
+
+.imagens {
+  width: 40px;
+}
